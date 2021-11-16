@@ -4,6 +4,7 @@
     <li>
       <input type="checkbox" class="task" name="<%task.title%>">
       <label for="<%task.title%>"><%= link_to task.title, task_path(task)%></label>
+      <label><%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?" }%></label>
     </li>
   <% end %>
 </ul>
