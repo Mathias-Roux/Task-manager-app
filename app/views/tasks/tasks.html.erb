@@ -3,7 +3,8 @@
   <% @all_tasks.each do |task| %>
     <li>
       <input type="checkbox" class="task" name="<%task.title%>">
-      <label for="<%task.title%>"><%=task.title%></label>
+      <label for="<%task.title%>"><%= link_to task.title, task_path(task)%></label>
     </li>
   <% end %>
 </ul>
+<%= link_to '+ Create a new task', new_path %>

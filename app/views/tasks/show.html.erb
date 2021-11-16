@@ -1,0 +1,9 @@
+<h1><%= @task.title%></h1>
+<div class="details">
+  <%= @task.details %>!
+</div>
+<div class="check">
+  <input type="checkbox" class="completed?" name="completed">
+  <label for="completed">This task in not completed yet!</label>
+</div>
+<%= link_to 'back to list', tasks_path%>
