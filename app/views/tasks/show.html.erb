@@ -1,12 +1,16 @@
 <div class="header">
   <h1><%= @task.title%></h1>
-  <%= link_to 'edit task', edit_path %>
+  <%= link_to 'edit task', edit_task_path(@task) %>
 </div>
 <div class="details">
   <%= @task.details %>!
 </div>
-<div class="check">
-  <input type="checkbox" class="completed?" name="completed">
-  <label for="completed">This task in not completed yet!</label>
-</div>
-<%= link_to 'back to list', tasks_path%>
+<% if @task.completed %>
+  <i class="fa fa-check-square-o"></i> This task is completed
+<% else %>
+  <i class="fa fa-square-o"></i> This task is not completed yet
+<% end %>
+<hr>
+
+
+<%= link_to 'back to list', root_path%>
