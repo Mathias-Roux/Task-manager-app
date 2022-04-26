@@ -5,16 +5,18 @@
 
 <section>
   <ul class="item--list">
-    <% @tasks.each do |task| %>
+    <% @tasks.each do |key, value| %>
+      <%= key.to_date %>
       <li class="item">
-        <%= task.created_at.to_date %>
-        <% if task.completed %>
-          <%= link_to task.title, task_path(task), class: 'item--checked'%>
-        <% else %>
-          <%= link_to task.title, task_path(task)%>
-        <% end %>
+        <% value.each do |task|%>
+          <% if task.completed %>
+            <%= link_to task.title, task_path(task), class: 'item--checked'%>
+          <% else %>
+            <%= link_to task.title, task_path(task)%>
+          <% end %>
         
-        <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?", class: 'delete--link' }%>
+          <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?", class: 'delete--link' }%>
+        <%end%>
       </li>
     <% end %>
   </ul>
