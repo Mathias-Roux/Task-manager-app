@@ -8,3 +8,28 @@
 
 
 // Your CSS partials
+@import "pages/_index.scss";
+
+
+
+//Global css
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: $body-font;
+}
+
+a{
+	text-decoration: none;
+
+	&:visited{
+		color: black;
+	}
+}

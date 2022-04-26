@@ -1,2 +1,40 @@
 // Specific CSS for your home-page
 
+header{
+	padding: 3rem 3vw;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+
+	h1{
+		font-size: 10vw;
+	}
+
+	.create--link{
+		align-self: center;
+		font-size: 5vw;
+	}
+}
+
+section{
+	padding: 0 16vw;
+}
+
+//ul list 
+.item--list{
+	list-style-type: none;
+	padding: 0;
+	
+	//item
+	.item{
+		font-size: 5vw;
+		text-transform: capitalize;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	//task over
+	.item--checked{
+		text-decoration: line-through;
+	}
+}
