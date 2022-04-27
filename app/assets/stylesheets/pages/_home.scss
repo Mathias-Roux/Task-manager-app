@@ -17,7 +17,7 @@ header{
 }
 
 section{
-	padding: 0 16vw;
+	padding: 0 14vw;
 }
 
 //ul list 
@@ -26,14 +26,18 @@ section{
 	padding: 0;
 	display: grid;
 	grid-template-areas: "item  space--link delete--link";
-	grid-template-columns: repeat(3, 1fr);
+	grid-auto-columns: 1fr 1fr 5vw;
 	grid-column-gap: 0;
-	grid-row-gap: 0;
+	grid-row-gap: 1vw;
 	
 	//li item
 	.item{
 		font-size: 5vw;
 		text-transform: capitalize;
+		overflow: hidden;
+		max-width: 10ch;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	//task index
@@ -45,15 +49,15 @@ section{
 	}
 
 	.space--link{
-		width: 100%;
+		width: 80%;
 		height: 1px;
 		background-color: black;
-		align-self: end;
+		opacity: 0.2;
+		align-self: center;
 	}
 
 	.delete--link{
 		font-size: 5vw;
-   		align-self: end;
 	}
 
 	//task over

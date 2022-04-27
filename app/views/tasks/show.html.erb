@@ -1,7 +1,9 @@
-<div class="header">
-  <h1><%= @task.title%></h1>
-  <%= link_to 'edit task', edit_task_path(@task) %>
-</div>
+<header>
+  <%= link_to 'back to list', root_path, class: "back--link"%>
+  <h1><%= @task.title.capitalize()%></h1>
+  <%= link_to 'edit task', edit_task_path(@task), class: "edit--link" %>
+</header>
+
 <div class="details">
   <%= @task.details %>!
 </div>
