@@ -24,13 +24,16 @@ section{
 .item--list{
 	list-style-type: none;
 	padding: 0;
+	display: grid;
+	grid-template-areas: "item  space--link delete--link";
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 0;
+	grid-row-gap: 0;
 	
-	//item
+	//li item
 	.item{
 		font-size: 5vw;
 		text-transform: capitalize;
-		display: flex;
-		align-self: flex-end;
 	}
 
 	//task index
@@ -38,11 +41,19 @@ section{
 		font-size: 2vw;
 		font-weight: lighter;
 		opacity: 0.5;
+		top: -1.5em;
 	}
 
-	//task todo
-	.item--todo{
-		
+	.space--link{
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		align-self: end;
+	}
+
+	.delete--link{
+		font-size: 5vw;
+   		align-self: end;
 	}
 
 	//task over

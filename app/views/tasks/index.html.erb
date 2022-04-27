@@ -4,20 +4,20 @@
 </header>
 
 <section>
-  <ul class="item--list">
+  <div class="item--list">
     <% @tasks.each_with_index do |task, index| %>
-      <li class="item">
-        <span class="item--index">
+      <div class="item">
+        <sup class="item--index">
           <%= index %>
-        </span>
+        </sup>
         <% if task.completed %>
           <%= link_to task.title, task_path(task), class: 'item--todo checked'%>
         <% else %>
           <%= link_to task.title, task_path(task), class: 'item--todo'%>
         <% end %>
-        
-        <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?", class: 'delete--link' }%>
-      </li>
+      </div>
+      <div class="space--link"></div>
+      <%= link_to 'X', task_path(task), method: :delete, data: { confirm: "Are you sure?" }, class: 'delete--link'%>
     <% end %>
-  </ul>
+  </div>
 </section>
