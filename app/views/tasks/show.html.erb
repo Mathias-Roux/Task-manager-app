@@ -1,5 +1,5 @@
 <header>
-  <%= link_to 'back to list', root_path, class: "back--link"%>
+  <%= link_to '<', root_path, class: "back--link"%>
   <h1><%= @task.title.capitalize()%></h1>
   <%= link_to 'edit task', edit_task_path(@task), class: "edit--link" %>
 </header>
@@ -7,12 +7,10 @@
 <div class="details">
   <%= @task.details %>!
 </div>
+
 <% if @task.completed %>
-  <i class="fa fa-check-square-o"></i> This task is completed
+  This task is completed
 <% else %>
-  <i class="fa fa-square-o"></i> This task is not completed yet
+  This task is not completed yet
 <% end %>
-<hr>
 
-
-<%= link_to 'back to list', root_path%>
