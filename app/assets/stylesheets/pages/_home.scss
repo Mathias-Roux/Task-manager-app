@@ -30,11 +30,24 @@ section{
 		font-size: 5vw;
 		text-transform: capitalize;
 		display: flex;
-		justify-content: space-between;
+		align-self: flex-end;
+	}
+
+	//task index
+	.item--index{
+		font-size: 2vw;
+		font-weight: lighter;
+		opacity: 0.5;
+	}
+
+	//task todo
+	.item--todo{
+		
 	}
 
 	//task over
-	.item--checked{
+	.checked{
 		text-decoration: line-through;
+		font-style: italic;
 	}
 }

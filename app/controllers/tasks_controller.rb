@@ -2,9 +2,7 @@ class TasksController < ApplicationController
   before_action :set_find_action, only: %i[show edit update destroy]
 
   def index
-    @tasks = Task.all.group_by { | task |
-      task.created_at
-    }
+    @tasks = Task.all.order("created_at DESC")
   end
 
   def show

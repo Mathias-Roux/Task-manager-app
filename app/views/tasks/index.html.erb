@@ -5,18 +5,18 @@
 
 <section>
   <ul class="item--list">
-    <% @tasks.each do |key, value| %>
-      <%= key.to_date %>
+    <% @tasks.each_with_index do |task, index| %>
       <li class="item">
-        <% value.each do |task|%>
-          <% if task.completed %>
-            <%= link_to task.title, task_path(task), class: 'item--checked'%>
-          <% else %>
-            <%= link_to task.title, task_path(task)%>
-          <% end %>
+        <span class="item--index">
+          <%= index %>
+        </span>
+        <% if task.completed %>
+          <%= link_to task.title, task_path(task), class: 'item--todo checked'%>
+        <% else %>
+          <%= link_to task.title, task_path(task), class: 'item--todo'%>
+        <% end %>
         
-          <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?", class: 'delete--link' }%>
-        <%end%>
+        <%= link_to 'x', task_path(task), method: :delete, data: { confirm: "Are you sure?", class: 'delete--link' }%>
       </li>
     <% end %>
   </ul>
