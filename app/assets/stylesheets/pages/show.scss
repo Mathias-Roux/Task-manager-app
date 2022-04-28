@@ -1,0 +1,28 @@
+header{
+
+	h1{
+		overflow: hidden;
+		max-width: 10ch;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.back--link{
+		font-size: 5vw;
+		align-self: center;
+	}
+
+	.edit--link{
+		align-self: center;
+		font-size: 5vw;
+	}
+}
+
+.details{
+	font-size: 5vw;
+}
+
+.task--done?{
+	font-size: 4vw;
+	
+}

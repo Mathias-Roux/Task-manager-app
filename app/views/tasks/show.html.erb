@@ -8,9 +8,12 @@
   <%= @task.details %>!
 </div>
 
-<% if @task.completed %>
-  This task is completed
-<% else %>
-  This task is not completed yet
-<% end %>
+<div class="task--done?">
+  <% if @task.completed %>
+    This task is completed
+  <% else %>
+    This task is not completed yet
+  <% end %>
+</div>
+
 
